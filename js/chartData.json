@@ -1,0 +1,796 @@
+[
+  {
+    "name": "LCLine-2",
+    "errors": {
+      "Unknown": {
+        "name": "Unknown",
+        "id": 3,
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "totalWaitTime": 89868,
+            "effectiveWaitTime": 89868,
+            "boardsDown": 26423.8547486034
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "totalWaitTime": 508521,
+            "effectiveWaitTime": 508521,
+            "boardsDown": 149521.032049397
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "totalWaitTime": 70937,
+            "effectiveWaitTime": 70937,
+            "boardsDown": 20857.55072
+          }
+        ]
+      },
+      "downTimeInSeconds": {
+        "name": "downTimeInSeconds",
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "boardsDown": 47928.8444575125,
+            "boardCount": 3,
+            "badCount": 0,
+            "performance": 0.40812,
+            "totalWaitTime": 163006,
+            "performanceLostTime": 14.797,
+            "performanceBoardLost": 4.35077918259335,
+            "scheduledDowntime": 0,
+            "workTime": 259200,
+            "overProduction": 0,
+            "qualityBoardLost": 0,
+            "overProductionTime": 0,
+            "theoreticalBoards": 47936.1952366951
+          },
+          {
+            "startTimestamp": "2017-05-02T20:13:00.000Z",
+            "boardsDown": 177830.049985298,
+            "boardCount": 0,
+            "badCount": 0,
+            "performance": 1,
+            "totalWaitTime": 604800,
+            "performanceLostTime": 0,
+            "performanceBoardLost": 0,
+            "scheduledDowntime": 0,
+            "workTime": 604800,
+            "overProduction": 0,
+            "qualityBoardLost": 0,
+            "overProductionTime": 0,
+            "theoreticalBoards": 177830.049985298
+          },
+          {
+            "startTimestamp": "2017-05-09T20:13:00.000Z",
+            "boardsDown": 173596.0011761244,
+            "boardCount": 0,
+            "badCount": 0,
+            "performance": 1,
+            "totalWaitTime": 590400,
+            "performanceLostTime": 0,
+            "performanceBoardLost": 0,
+            "scheduledDowntime": 14400,
+            "workTime": 590400,
+            "overProduction": 0,
+            "qualityBoardLost": 0,
+            "overProductionTime": 0,
+            "theoreticalBoards": 173596.0011761244
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "boardsDown": 177782.122905028,
+            "boardCount": 20,
+            "badCount": 0,
+            "performance": 0.417300613496932,
+            "totalWaitTime": 604637,
+            "performanceLostTime": 94.98,
+            "performanceBoardLost": 27.9270802705087,
+            "scheduledDowntime": 0,
+            "workTime": 604800,
+            "overProduction": 0,
+            "qualityBoardLost": 0,
+            "overProductionTime": 0,
+            "theoreticalBoards": 177830.049985299
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "boardsDown": 177830.049985298,
+            "boardCount": 0,
+            "badCount": 0,
+            "performance": 1,
+            "totalWaitTime": 604800,
+            "performanceLostTime": 0,
+            "performanceBoardLost": 0,
+            "scheduledDowntime": 0,
+            "workTime": 604800,
+            "overProduction": 0,
+            "qualityBoardLost": 0,
+            "overProductionTime": 0,
+            "theoreticalBoards": 177830.049985298
+          }
+        ]
+      },
+      "effectivePlacementTime": {
+        "name": "effectivePlacementTime",
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "boardsDown": 0,
+            "totalWaitTime": 25
+          },
+          {
+            "startTimestamp": "2017-05-02T20:13:00.000Z",
+            "boardsDown": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-09T20:13:00.000Z",
+            "boardsDown": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "boardsDown": 0,
+            "totalWaitTime": 163
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "boardsDown": 0,
+            "totalWaitTime": 0
+          }
+        ]
+      },
+      "Performance": {
+        "name": "Performance",
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "boardsDown": 4.35077918259335,
+            "effectiveWaitTime": 14.797,
+            "performance": 0.40812,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-02T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "performance": 1,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-09T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "performance": 1,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "boardsDown": 27.9270802705087,
+            "effectiveWaitTime": 94.98,
+            "performance": 0.417300613496932,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "performance": 1,
+            "totalWaitTime": 0
+          }
+        ]
+      },
+      "Quality": {
+        "name": "Quality",
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-02T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-09T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          }
+        ]
+      },
+      "performanceWithQuality": {
+        "name": "performanceWithQuality",
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "boardsDown": 2.41046750955601,
+            "effectiveWaitTime": 14.797,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-02T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-09T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "boardsDown": 26.2807997647751,
+            "effectiveWaitTime": 94.98,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          }
+        ]
+      },
+      "qualityWithPerformance": {
+        "name": "qualityWithPerformance",
+        "errorWaitTimes": [
+          {
+            "startTimestamp": "2017-05-30T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-02T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-09T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-23T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          },
+          {
+            "startTimestamp": "2017-05-16T20:13:00.000Z",
+            "boardsDown": 0,
+            "effectiveWaitTime": 0,
+            "totalWaitTime": 0
+          }
+        ]
+      }
+    },
+    "errorNames": [
+      "Unknown"
+    ],
+    "equipments": {
+      "NPM-D": {
+        "errors": {
+          "Shutdown": {
+            "name": "Shutdown",
+            "id": 44,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-02T20:13:00.000Z",
+                "totalWaitTime": 604800,
+                "effectiveWaitTime": 604800,
+                "boardsDown": 177830.05
+              },
+              {
+                "startTimestamp": "2017-05-09T20:13:00.000Z",
+                "totalWaitTime": 590400,
+                "effectiveWaitTime": 590400,
+                "boardsDown": 173596
+              },
+              {
+                "startTimestamp": "2017-05-16T20:13:00.000Z",
+                "totalWaitTime": 9293,
+                "effectiveWaitTime": 9293,
+                "boardsDown": 2732.41
+              }
+            ]
+          },
+          "Pre Wait Time / Front": {
+            "name": "Pre Wait Time / Front",
+            "id": 1,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-16T20:13:00.000Z",
+                "totalWaitTime": 743,
+                "effectiveWaitTime": 0,
+                "boardsDown": 0
+              },
+              {
+                "startTimestamp": "2017-05-30T20:13:00.000Z",
+                "totalWaitTime": 89471,
+                "effectiveWaitTime": 0,
+                "boardsDown": 0
+              }
+            ]
+          },
+          "Idle / Front": {
+            "name": "Idle / Front",
+            "id": 4,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-16T20:13:00.000Z",
+                "totalWaitTime": 112,
+                "effectiveWaitTime": 112,
+                "boardsDown": 32.93
+              },
+              {
+                "startTimestamp": "2017-05-23T20:13:00.000Z",
+                "totalWaitTime": 6,
+                "effectiveWaitTime": 6,
+                "boardsDown": 1.69
+              }
+            ]
+          },
+          "Convayour Error": {
+            "name": "Convayour Error",
+            "id": 16,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-16T20:13:00.000Z",
+                "totalWaitTime": 52,
+                "effectiveWaitTime": 52,
+                "boardsDown": 15.21
+              }
+            ]
+          },
+          "Machine Changeover": {
+            "name": "Machine Changeover",
+            "id": 39,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-16T20:13:00.000Z",
+                "totalWaitTime": 524242,
+                "effectiveWaitTime": 524242,
+                "boardsDown": 154143.5
+              },
+              {
+                "startTimestamp": "2017-05-23T20:13:00.000Z",
+                "totalWaitTime": 11014,
+                "effectiveWaitTime": 11015,
+                "boardsDown": 3238.79
+              },
+              {
+                "startTimestamp": "2017-05-30T20:13:00.000Z",
+                "totalWaitTime": 73139,
+                "effectiveWaitTime": 73138,
+                "boardsDown": 21504.8
+              }
+            ]
+          },
+          "Unit Adjustment": {
+            "name": "Unit Adjustment",
+            "id": 43,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-16T20:13:00.000Z",
+                "totalWaitTime": 165,
+                "effectiveWaitTime": 165,
+                "boardsDown": 48.43
+              }
+            ]
+          },
+          "Single Stop": {
+            "name": "Single Stop",
+            "id": 12,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-23T20:13:00.000Z",
+                "totalWaitTime": 155,
+                "effectiveWaitTime": 155,
+                "boardsDown": 45.6
+              },
+              {
+                "startTimestamp": "2017-05-30T20:13:00.000Z",
+                "totalWaitTime": 1,
+                "effectiveWaitTime": 1,
+                "boardsDown": 0.19
+              }
+            ]
+          },
+          "Part Exhaust": {
+            "name": "Part Exhaust",
+            "id": 15,
+            "errorWaitTimes": [
+              {
+                "startTimestamp": "2017-05-23T20:13:00.000Z",
+                "totalWaitTime": 84940,
+                "effectiveWaitTime": 84940,
+                "boardsDown": 24975.01
+              }
+            ]
+          }
+        },
+        "errorNames": [
+          "Shutdown",
+          "Pre Wait Time",
+          "Idle",
+          "Convayour Error",
+          "Machine Changeover",
+          "Unit Adjustment",
+          "Single Stop",
+          "Part Exhaust"
+        ]
+      }
+    },
+    "actualBoards": 23,
+    "theoreticalBoards": 755022.35,
+    "badCount": 0,
+    "performance": 0.42,
+    "performanceLostTime": 109.777,
+    "performanceBoardLost": 32.28,
+    "workTime": 2664000,
+    "quality": 1,
+    "performanceWithQuality_time_lost": 109.777,
+    "performanceWithQuality_board_lost": 28.69,
+    "availability": 0,
+    "theoreticalBoards_A": 754993.66,
+    "theoreticalBoards_AQ": 754990.07,
+    "theoreticalBoards_AP": 755022.35,
+    "jsres": {
+      "source": "usp_pa_rollup('2017-05-02 15:13:00-05','2017-06-02 15:13:00-05','7 days',array['shift1','shift2','shift3'])",
+      "call_time": "2017-06-02T18:08:10.792378-05:00",
+      "execution_time": "00:00:00.564361",
+      "lineStatistics": [
+        {
+          "intervalStart": "2017-05-30T15:13:00-05:00",
+          "workTime": 259200,
+          "theoreticalBoards": 47936.1952366951,
+          "ScheduledDowntime": 0,
+          "OverProduction": 0,
+          "OverProductionTime": 0,
+          "boardCount": 3,
+          "performance": 0.40812,
+          "performanceLostTime": 14.797,
+          "performance_time_lost": 14.797,
+          "performanceWithQuality_time_lost": 14.797,
+          "performanceWithQuality_board_lost": 2.41046750955601,
+          "quality_time_lost": 0,
+          "qualityWithPerformance_time_lost": 0,
+          "performance_board_lost": 4.35077918259335,
+          "badCount": 0,
+          "quality_board_lost": 0,
+          "qualityWithPerformance_board_lost": 0,
+          "downTimeInSeconds": 163006,
+          "boardsdownTimeInSeconds": 47928.8444575125,
+          "effectivePlacementTime": 25,
+          "Downtime": [
+            {
+              "Label": "Unknown",
+              "TotalTimeInSeconds": 89868,
+              "EffectiveTimeInSeconds": 89868,
+              "boardsLost": 26423.8547486034,
+              "Lane": "",
+              "ID": 3
+            }
+          ]
+        },
+        {
+          "intervalStart": "2017-05-02T15:13:00-05:00",
+          "workTime": 604800,
+          "theoreticalBoards": 177830.049985298,
+          "ScheduledDowntime": 0,
+          "OverProduction": 0,
+          "OverProductionTime": 0,
+          "boardCount": 0,
+          "performance": 1,
+          "performanceLostTime": 0,
+          "performance_time_lost": 0,
+          "performanceWithQuality_time_lost": 0,
+          "performanceWithQuality_board_lost": 0,
+          "quality_time_lost": 0,
+          "qualityWithPerformance_time_lost": 0,
+          "performance_board_lost": 0,
+          "badCount": 0,
+          "quality_board_lost": 0,
+          "qualityWithPerformance_board_lost": 0,
+          "downTimeInSeconds": 604800,
+          "boardsdownTimeInSeconds": 177830.049985298,
+          "effectivePlacementTime": 0,
+          "Downtime": null
+        },
+        {
+          "intervalStart": "2017-05-09T15:13:00-05:00",
+          "workTime": 590400,
+          "theoreticalBoards": 173596.0011761244,
+          "ScheduledDowntime": 14400,
+          "OverProduction": 0,
+          "OverProductionTime": 0,
+          "boardCount": 0,
+          "performance": 1,
+          "performanceLostTime": 0,
+          "performance_time_lost": 0,
+          "performanceWithQuality_time_lost": 0,
+          "performanceWithQuality_board_lost": 0,
+          "quality_time_lost": 0,
+          "qualityWithPerformance_time_lost": 0,
+          "performance_board_lost": 0,
+          "badCount": 0,
+          "quality_board_lost": 0,
+          "qualityWithPerformance_board_lost": 0,
+          "downTimeInSeconds": 590400,
+          "boardsdownTimeInSeconds": 173596.0011761244,
+          "effectivePlacementTime": 0,
+          "Downtime": null
+        },
+        {
+          "intervalStart": "2017-05-23T15:13:00-05:00",
+          "workTime": 604800,
+          "theoreticalBoards": 177830.049985299,
+          "ScheduledDowntime": 0,
+          "OverProduction": 0,
+          "OverProductionTime": 0,
+          "boardCount": 20,
+          "performance": 0.417300613496932,
+          "performanceLostTime": 94.98,
+          "performance_time_lost": 94.98,
+          "performanceWithQuality_time_lost": 94.98,
+          "performanceWithQuality_board_lost": 26.2807997647751,
+          "quality_time_lost": 0,
+          "qualityWithPerformance_time_lost": 0,
+          "performance_board_lost": 27.9270802705087,
+          "badCount": 0,
+          "quality_board_lost": 0,
+          "qualityWithPerformance_board_lost": 0,
+          "downTimeInSeconds": 604637,
+          "boardsdownTimeInSeconds": 177782.122905028,
+          "effectivePlacementTime": 163,
+          "Downtime": [
+            {
+              "Label": "Unknown",
+              "TotalTimeInSeconds": 508521,
+              "EffectiveTimeInSeconds": 508521,
+              "boardsLost": 149521.032049397,
+              "Lane": "",
+              "ID": 3
+            }
+          ]
+        },
+        {
+          "intervalStart": "2017-05-16T15:13:00-05:00",
+          "workTime": 604800,
+          "theoreticalBoards": 177830.049985298,
+          "ScheduledDowntime": 0,
+          "OverProduction": 0,
+          "OverProductionTime": 0,
+          "boardCount": 0,
+          "performance": 1,
+          "performanceLostTime": 0,
+          "performance_time_lost": 0,
+          "performanceWithQuality_time_lost": 0,
+          "performanceWithQuality_board_lost": 0,
+          "quality_time_lost": 0,
+          "qualityWithPerformance_time_lost": 0,
+          "performance_board_lost": 0,
+          "badCount": 0,
+          "quality_board_lost": 0,
+          "qualityWithPerformance_board_lost": 0,
+          "downTimeInSeconds": 604800,
+          "boardsdownTimeInSeconds": 177830.049985298,
+          "effectivePlacementTime": 0,
+          "Downtime": [
+            {
+              "Label": "Unknown",
+              "TotalTimeInSeconds": 70937,
+              "EffectiveTimeInSeconds": 70937,
+              "boardsLost": 20857.55072,
+              "Lane": "",
+              "ID": 3
+            }
+          ]
+        }
+      ],
+      "machineStatistics": [
+        {
+          "equipmentName": "NPM-D",
+          "intervalStart": "2017-05-02T15:13:00-05:00",
+          "stage": 1,
+          "ID": 14,
+          "Downtime": [
+            {
+              "Label": "Shutdown",
+              "TotalTimeInSeconds": 604800,
+              "EffectiveTimeInSeconds": 604800,
+              "boardsLost": 177830.05,
+              "Lane": "",
+              "ID": 44
+            }
+          ]
+        },
+        {
+          "equipmentName": "NPM-D",
+          "intervalStart": "2017-05-09T15:13:00-05:00",
+          "stage": 1,
+          "ID": 14,
+          "Downtime": [
+            {
+              "Label": "Shutdown",
+              "TotalTimeInSeconds": 590400,
+              "EffectiveTimeInSeconds": 590400,
+              "boardsLost": 173596,
+              "Lane": "",
+              "ID": 44
+            }
+          ]
+        },
+        {
+          "equipmentName": "NPM-D",
+          "intervalStart": "2017-05-16T15:13:00-05:00",
+          "stage": 1,
+          "ID": 14,
+          "Downtime": [
+            {
+              "Label": "Pre Wait Time",
+              "TotalTimeInSeconds": 743,
+              "EffectiveTimeInSeconds": 0,
+              "boardsLost": 0,
+              "Lane": "Front",
+              "ID": 1
+            },
+            {
+              "Label": "Idle",
+              "TotalTimeInSeconds": 112,
+              "EffectiveTimeInSeconds": 112,
+              "boardsLost": 32.93,
+              "Lane": "Front",
+              "ID": 4
+            },
+            {
+              "Label": "Convayour Error",
+              "TotalTimeInSeconds": 52,
+              "EffectiveTimeInSeconds": 52,
+              "boardsLost": 15.21,
+              "Lane": "",
+              "ID": 16
+            },
+            {
+              "Label": "Machine Changeover",
+              "TotalTimeInSeconds": 524242,
+              "EffectiveTimeInSeconds": 524242,
+              "boardsLost": 154143.5,
+              "Lane": "",
+              "ID": 39
+            },
+            {
+              "Label": "Unit Adjustment",
+              "TotalTimeInSeconds": 165,
+              "EffectiveTimeInSeconds": 165,
+              "boardsLost": 48.43,
+              "Lane": "",
+              "ID": 43
+            },
+            {
+              "Label": "Shutdown",
+              "TotalTimeInSeconds": 9293,
+              "EffectiveTimeInSeconds": 9293,
+              "boardsLost": 2732.41,
+              "Lane": "",
+              "ID": 44
+            }
+          ]
+        },
+        {
+          "equipmentName": "NPM-D",
+          "intervalStart": "2017-05-23T15:13:00-05:00",
+          "stage": 1,
+          "ID": 14,
+          "Downtime": [
+            {
+              "Label": "Idle",
+              "TotalTimeInSeconds": 6,
+              "EffectiveTimeInSeconds": 6,
+              "boardsLost": 1.69,
+              "Lane": "Front",
+              "ID": 4
+            },
+            {
+              "Label": "Single Stop",
+              "TotalTimeInSeconds": 155,
+              "EffectiveTimeInSeconds": 155,
+              "boardsLost": 45.6,
+              "Lane": "",
+              "ID": 12
+            },
+            {
+              "Label": "Part Exhaust",
+              "TotalTimeInSeconds": 84940,
+              "EffectiveTimeInSeconds": 84940,
+              "boardsLost": 24975.01,
+              "Lane": "",
+              "ID": 15
+            },
+            {
+              "Label": "Machine Changeover",
+              "TotalTimeInSeconds": 11014,
+              "EffectiveTimeInSeconds": 11015,
+              "boardsLost": 3238.79,
+              "Lane": "",
+              "ID": 39
+            }
+          ]
+        },
+        {
+          "equipmentName": "NPM-D",
+          "intervalStart": "2017-05-30T15:13:00-05:00",
+          "stage": 1,
+          "ID": 14,
+          "Downtime": [
+            {
+              "Label": "Pre Wait Time",
+              "TotalTimeInSeconds": 89471,
+              "EffectiveTimeInSeconds": 0,
+              "boardsLost": 0,
+              "Lane": "Front",
+              "ID": 1
+            },
+            {
+              "Label": "Single Stop",
+              "TotalTimeInSeconds": 1,
+              "EffectiveTimeInSeconds": 1,
+              "boardsLost": 0.19,
+              "Lane": "",
+              "ID": 12
+            },
+            {
+              "Label": "Machine Changeover",
+              "TotalTimeInSeconds": 73139,
+              "EffectiveTimeInSeconds": 73138,
+              "boardsLost": 21504.8,
+              "Lane": "",
+              "ID": 39
+            }
+          ]
+        }
+      ],
+      "lineEfficiency": [
+        {
+          "theoreticalBoards": 755022.35,
+          "theoreticalBoards_A": 754993.66,
+          "theoreticalBoards_AP": 755022.35,
+          "theoreticalBoards_AQ": 754990.07,
+          "workTime": 2664000,
+          "actualBoards": 23,
+          "availability": 0,
+          "performance": 0.42,
+          "performance_time_lost": 109.777,
+          "performance_board_lost": 32.28,
+          "performanceWithQuality_time_lost": 109.777,
+          "performanceWithQuality_board_lost": 28.69,
+          "badCount": 0,
+          "Quality": 1
+        }
+      ]
+    }
+  }
+]

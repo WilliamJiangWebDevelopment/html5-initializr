@@ -2134,6 +2134,11 @@ ul.small-width {
     padding-right: 20px;
 }
 
+#secDiv .user-table {
+    margin-top: -20px;
+    margin-left: 40px;
+}
+
 .permission .user-table.font {
     font-size: 12px;
 }
@@ -2351,7 +2356,6 @@ ul.small-width {
     padding: inherit;
 }
 
-;
 /*  Styles for Login Background Screen Desktop*/
 
 body {
@@ -4583,25 +4587,34 @@ select#application {
 }
 
 /* william */
-.counterdown_timer {
+.counterdown {
     top: 12px;
     float: right;
     cursor: pointer;
     border: none;
 }
 
-.counterdown_timer .clock {
+.counterdown .clock {
     background: url(../img/clock.png) no-repeat center;
     background-size: cover;
     width: 26px;
     height: 26px;
 }
 
-.counterdown_timer .timer {
-    font-weight: bolder;
-    font-size: 16px;
-    color: #0000A0;
-    padding-top: 4px;
+.counterdown .timer {
+    width: 100%;
+    background: rgba(0, 100, 0, 0.5);
+    margin: 0;
+    padding: 0;
+}
+
+.counterdown .text {
+    font-weight: 900;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.4);
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 5px;
 }
 
 .counterdown_dialog {
@@ -4639,6 +4652,22 @@ select#application {
     cursor: default;
 }
 
+.counterdown_loading {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .5) 50% 50% no-repeat;
+}
+
+.lines-setting {
+    position: relative;
+    margin-right: 16px;
+}
+
 /* end of william */
 
 #exportCSV {
@@ -4662,7 +4691,7 @@ select#application {
 }
 
 .exportPNG {
-    background: url('../../Images/png.png') no-repeat center;
+    background: url('../img/png.png') no-repeat center;
     float: right;
     width: 40px;
     height: 27px;
@@ -4678,16 +4707,6 @@ select#application {
     width: 50px;
     height: 50px;
     border: none;
-}
-
-.print {
-    background: url('../img/print.png') no-repeat center;
-    float: right;
-    width: 40px;
-    height: 30px;
-    border: none;
-    background-size: 27px;
-    margin-right: 11px;
 }
 
 #printPlacement {
@@ -5301,13 +5320,6 @@ span.half-box.half-box-filter:before {
     vertical-align: top;
     margin-top: 6px;
     font-style: italic;
-}
-
-.filterSearchRow #secDiv {
-    display: inline-block;
-    width: 78%;
-    margin-left: 5px;
-    height: 16px;
 }
 
 .mvTransaction input[type="search"]::-webkit-search-cancel-button {
@@ -9048,6 +9060,23 @@ header.header.vertMiddle.page-header.page-header .title {
     padding: 15px;
 }
 
+/*background image container*/
+.login-desk {
+    height: 100% !important;
+    background: url('../img/LoginBackgroundDesktop.jpg') no-repeat;
+    background-size: cover;
+    min-height: 425px;
+}
+
+/*login wrapper where color has opacity*/
+.login-wrapper {
+    background: rgba(0, 0, 0, 0.6);
+    top: 60%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
 /*common input box group*/
 .input-group {
     padding: 20px 20px 0px 20px;
@@ -11473,6 +11502,16 @@ select#application {
     border: none;
 }
 
+.schedule-report-btn {
+    background: url('../img/schedule.png') no-repeat center;
+    float: right;
+    width: 40px;
+    height: 30px;
+    border: none;
+    background-size: 27px;
+    margin-right: 11px;
+}
+
 .print {
     background: url('../img/print.png') no-repeat center;
     float: right;
@@ -11873,12 +11912,6 @@ div.dash {
     width: 10px;
 }
 
-/* added to remove achieved/total in progressbar*/
-/*.efficiency #value {
-	display:none;
-}
-*/
-
 /*for production analysis css ends*/
 .pgbarcontainer {
     padding-top: 1px;
@@ -12028,8 +12061,9 @@ div#datetimecontainer {
 /*MV Transaction Styles End */
 
 /*Advance Search Styles Start */
-.half-box-filter {
-    left: 0px;
+.half-box-filter, .half-box-numeric-filter, .half-box-numeric-range-filter {
+    left: 5px;
+    position: absolute;
     padding-bottom: 5px;
 }
 
@@ -12070,8 +12104,7 @@ span.half-box.half-box-filter:before {
 
 .filterSearchRow #secDiv {
     display: inline-block;
-    width: 78%;
-    margin-left: 5px;
+    /* margin-left: 5px; */
     height: 16px;
 }
 
@@ -12289,7 +12322,8 @@ div.separator {
     border:none;
     background:none;
 } */
-
+/
+/
 .mvTransaction .jqx-fill-state-hover {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -14561,34 +14595,31 @@ div#licenseRemainTableRow span:first-child {
     margin-bottom: 40px;
 }
 
-.generic-report .multiselect-label {
+.multiselect-label {
     float: left;
-    width: 22%;
+    width: 287px;
     text-align: left;
     line-height: 14px;
 }
 
-.generic-report .multiselect {
+.multiselect {
     width: 97%;
 }
 
-.generic-report #secDiv {
-    width: 300px;
-    float: left;
-    margin-left: 10px;
+#secDiv {
+    width: 100%;
 }
 
 .generic-report .date, .generic-report .datetime {
     text-align: center;
-    /*width: 70px;*/
     height: 20px;
     line-height: 20px;
     float: left;
-    margin-left: 2px;
 }
 
-.generic-report .filterSearchRow {
-    height: 22px;
+.filterSearchRow {
+    min-height: 22px;
+    position: relative;
 }
 
 .generic-report .half-box-numeric-range-filter {
@@ -14597,14 +14628,16 @@ div#licenseRemainTableRow span:first-child {
     float: left;
 }
 
-.generic-report .half-box-filter input {
-    width: 97%;
+.half-box-filter input, .half-box-filter .wrapper {
+    width: 287px !important;
+    padding-right: 20px !important;
 }
 
 .generic-report .half-box-numeric-filter input {
     background-color: transparent;
     border: none;
-    width: 97%;
+    width: 287px;
+    padding-right: 20px;
 }
 
 .generic-report .half-box-numeric-range-filter input {
@@ -14647,6 +14680,15 @@ div#licenseRemainTableRow span:first-child {
 
 .generic-report #genericreportgrid {
     height: calc(100% - 40px);
+}
+
+.generic-report #scheduleConfig {
+    box-shadow: 9px 7px 8px 1px #bbb;
+    box-sizing: content-box;
+    background: white;
+    width: calc(100% - 15px);
+    height: calc(100% - 50px);
+    margin-top: 10px;
 }
 
 .generic-report .reports-setting {
@@ -15265,7 +15307,11 @@ div#advanceSearchTime {
     background: rgba(255, 255, 255, .5) url('../img/loading.gif') 50% 50% no-repeat;
 }
 
-/**********************/
+.placeholder, .ms-choice > span {
+    padding-left: 5px !important;
+}
+
+/**********************************/
 .lines a.sidebar-toggle {
     display: block;
 }
