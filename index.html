@@ -1,169 +1,1 @@
-<!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang=""> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/style.css" type="text/css">
-    <style>
-        body {
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-    </style>
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/amstock.js"></script>
-
-</head>
-<body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">DataWare House</a>
-        </div>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="true">
-                <span id="counter">AutoRefresh Setting</span>
-                <span class="caret"></span>
-            </button>
-            <div class="dropdown-menu" id="ar-form">
-                <form class="form">
-                    <div class="form-group">
-                        <label class="radio-inline">
-                            <input type="radio" name="autoRefresh" id="ar-disable" checked>Disabled
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="autoRefresh" id="ar-enable">Enabled
-                        </label>
-                    </div>
-                    <div class="form-group" id="countdown" style="display: none;">
-                        <input type="text" class="form-control" placeholder="minute(s) to refresh">
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right" role="form">
-                <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
-        </div>
-        <!--/.navbar-collapse -->
-    </div>
-</nav>
-
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <div class="container">
-        <h1>Hello, world!</h1>
-
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-            unique.</p>
-
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-    </div>
-</div>
-
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Heading</h2>
-
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                euismod. Donec sed odio dui. </p>
-
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Heading</h2>
-
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                fermentum massa justo sit amet risus.</p>
-
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-    </div>
-
-    <hr>
-
-    <div id="chartdiv" style="width:100%; height:400px;"></div>
-
-    <footer>
-        <p>&copy; Company 2015</p>
-    </footer>
-</div>
-<!-- /container -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
-<script src="js/vendor/bootstrap.min.js"></script>
-
-<script src="js/main.js"></script>
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-                function () {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
-    ga('send', 'pageview');
-</script>
-</body>
-</html>
+<!doctype html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]--><!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang=""> <!--<![endif]--><head>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    <title>POC for Analysis and Configure</title>    <meta name="description" content="POC for Analysis and Configure">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="apple-touch-icon" href="apple-touch-icon.png">    <link rel="stylesheet" href="css/bootstrap.min.css">    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/style.css" type="text/css">    <style>        body {            padding-top: 50px;            padding-bottom: 20px;        }    </style>    <link rel="stylesheet" href="css/bootstrap-theme.min.css">    <link rel="stylesheet" href="css/main.css">    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>    <script src="https://www.amcharts.com/lib/3/serial.js"></script>    <script src="https://www.amcharts.com/lib/3/amstock.js"></script></head><body><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">    <div class="dropdown">        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"                aria-haspopup="true" aria-expanded="true">            <span id="counter">AutoRefresh Setting</span>            <span class="caret"></span>        </button>        <div class="dropdown-menu" id="ar-form">            <form class="form">                <div class="form-group">                    <label class="radio-inline">                        <input type="radio" name="autoRefresh" id="ar-disable" checked>Disabled                    </label>                    <label class="radio-inline">                        <input type="radio" name="autoRefresh" id="ar-enable">Enabled                    </label>                </div>                <div class="form-group" id="countdown" style="display: none;">                    <input type="text" class="form-control" placeholder="minute(s) to refresh">                </div>            </form>        </div>    </div></nav><div class="container">    <!-- Example row of columns -->    <div class="row">        <div class="col-md-4">            <section class="column1 controls">                <div class="user-table font" id="groupTable">                    <div class="user-row">                        <div class="user-column ">                            <div class="shift-checkbox-filter">                                <input type="checkbox" name="Shift 1" class="checkbox" id="shiftInput0">                                <label class="checkboxLabel" for="shiftInput0">                                    <span id="idShift1" class="LCStrings">Shift 1</span>                                </label>                            </div>                            <div class="shift-checkbox-filter">                                <input type="checkbox" name="Shift 3" class="checkbox" id="shiftInput2">                                <label class="checkboxLabel" for="shiftInput2">                                    <span id="idShift3" class="LCStrings">Shift 3</span>                                </label>                            </div>                        </div>                        <div class="user-column ">                            <div class="shift-checkbox-filter">                                <input type="checkbox" name="Shift 2" class="checkbox" id="shiftInput1">                                <label class="checkboxLabel" for="shiftInput1">                                    <span id="idShift2" class="LCStrings">Shift 2</span>                                </label>                            </div>                            <div class="shift-checkbox-filter">                                <input type="checkbox" name="Shift4" class="checkbox" id="shiftInput3">                                <label class="checkboxLabel" for="shiftInput3">                                    <span id="idShift4" class="LCStrings"></span>                                </label>                            </div>                        </div>                    </div>                </div>                <div id="searchControls">                    <div id="searchFilter">                        <div id="radioDivWrapper">                            <div id="radioDiv"><input type="radio" name="quickFilter" id="radio0"                                                      disabled="disabled"><label for="radio0" class="idLabel"><span                                    id="idLabel0" for="idLabel" class="labelSpan disabled">This</span></label><input                                    type="radio" name="quickFilter" id="radio1" disabled="disabled"><label for="radio1"                                                                                                           class="idLabel"><span                                    id="idLabel1" for="idLabel" class="labelSpan disabled">Last</span></label></div>                        </div>                        <div id="sliderDivWrapper">                            <div id="slidercontainer" class="scontainer">                                <div id="slidertext" class="stext">All</div>                                <div id="sliderdiv"><input type="range" id="slider" min="0" max="6" step="1"></div>                            </div>                        </div>                        <div id="dateTimeDivWrapper">                            <div id="datetimediv">                                <div class="date-time-label">Start:</div>                                <div id="startdate" data-role="input" role="textbox" style="width: 120px; height: 20px;"                                     aria-owns="calendarjqxWidget1a48dc1c" aria-haspopup="true" aria-readonly="false"                                     class="jqx-widget jqx-datetimeinput jqx-input jqx-overflow-hidden jqx-rc-all jqx-reset jqx-clear jqx-widget-content"                                     aria-valuenow="Thu Jun 01 2017 00:00:00 GMT-0500 (Central Daylight Time)"                                     aria-valuetext="01 Jun 2017"                                     aria-valuemin="Wed Jun 01 2016 15:26:46 GMT-0500 (Central Daylight Time)"                                     aria-valuemax="Thu Dec 01 2016 00:00:00 GMT-0600 (Central Standard Time)"                                     aria-disabled="false" aria-label="Current focused date is 6/1/2017, 12:00:00 AM">                                    <div class="jqx-max-size jqx-position-relative"><input                                            style="border: none; padding: 2px 3px; width: 100px; left: 0px; top: 0px; text-align: left;"                                            class="jqx-position-absolute jqx-reset jqx-clear jqx-input-content jqx-widget-content jqx-rc-all"                                            id="inputstartdate" autocomplete="off" type="textarea" placeholder=""                                            disabled="disabled">                                        <div style="height: 100%; width: 19px; left: 101px;"                                             class="jqx-position-absolute jqx-action-button jqx-fill-state-normal jqx-rc-r jqx-default">                                            <div class="jqx-icon jqx-icon-calendar"></div>                                        </div>                                        <div style="height: 100%; display: none; width: 19px; left: 120px;"                                             class="jqx-position-absolute jqx-action-button jqx-default jqx-fill-state-normal jqx-rc-r">                                            <div class="jqx-icon jqx-icon-time"></div>                                        </div>                                    </div>                                </div>                                <div id="starttime" data-role="input" role="textbox" style="width: 70px; height: 20px;"                                     aria-owns="calendarjqxWidget5fd1348f" aria-haspopup="true" aria-readonly="false"                                     class="jqx-widget jqx-datetimeinput jqx-input jqx-overflow-hidden jqx-rc-all jqx-reset jqx-clear jqx-widget-content"                                     aria-valuenow="Thu Jun 01 2017 00:00:00 GMT-0500 (Central Daylight Time)"                                     aria-valuetext="00:00"                                     aria-valuemin="Mon Jan 01 1900 00:00:00 GMT-0600 (Central Standard Time)"                                     aria-valuemax="Thu Dec 01 2016 00:00:00 GMT-0600 (Central Standard Time)"                                     aria-disabled="false" aria-label="Current focused date is 6/1/2017, 12:00:00 AM">                                    <div class="jqx-max-size jqx-position-relative"><input                                            style="border: none; padding: 2px 3px; width: 50px; left: 0px; top: 0px; text-align: left;"                                            class="jqx-position-absolute jqx-reset jqx-clear jqx-input-content jqx-widget-content jqx-rc-all"                                            id="inputstarttime" autocomplete="off" type="textarea" placeholder=""                                            disabled="disabled">                                        <div style="height: 100%; display: none; width: 19px; left: 51px;"                                             class="jqx-position-absolute jqx-action-button jqx-fill-state-normal jqx-default">                                            <div class="jqx-icon jqx-icon-calendar"></div>                                        </div>                                        <div style="height: 100%; width: 19px; left: 51px;"                                             class="jqx-position-absolute jqx-action-button jqx-default jqx-fill-state-normal jqx-rc-r">                                            <div class="jqx-icon jqx-icon-time"></div>                                        </div>                                    </div>                                </div>                                <br>                                <div class="date-time-label">End:</div>                                <div id="enddate" data-role="input" role="textbox" style="width: 120px; height: 20px;"                                     aria-owns="calendarjqxWidgetd2bcf67c" aria-haspopup="true" aria-readonly="false"                                     class="jqx-widget jqx-datetimeinput jqx-input jqx-overflow-hidden jqx-rc-all jqx-reset jqx-clear jqx-widget-content"                                     aria-valuenow="Thu Jun 01 2017 00:00:00 GMT-0500 (Central Daylight Time)"                                     aria-valuetext="01 Jun 2017"                                     aria-valuemin="Thu Jun 01 2017 00:00:00 GMT-0500 (Central Daylight Time)"                                     aria-valuemax="Thu Jun 01 2017 15:26:42 GMT-0500 (Central Daylight Time)"                                     aria-disabled="false" aria-label="Current focused date is 6/1/2017, 12:00:00 AM">                                    <div class="jqx-max-size jqx-position-relative"><input                                            style="border: none; padding: 2px 3px; width: 100px; left: 0px; top: 0px; text-align: left;"                                            class="jqx-position-absolute jqx-reset jqx-clear jqx-input-content jqx-widget-content jqx-rc-all"                                            id="inputenddate" autocomplete="off" type="textarea" placeholder=""                                            disabled="disabled">                                        <div style="height: 100%; width: 19px; left: 101px;"                                             class="jqx-position-absolute jqx-action-button jqx-fill-state-normal jqx-rc-r jqx-default">                                            <div class="jqx-icon jqx-icon-calendar"></div>                                        </div>                                        <div style="height: 100%; display: none; width: 19px; left: 120px;"                                             class="jqx-position-absolute jqx-action-button jqx-default jqx-fill-state-normal jqx-rc-r">                                            <div class="jqx-icon jqx-icon-time"></div>                                        </div>                                    </div>                                </div>                                <div id="endtime" data-role="input" role="textbox" style="width: 70px; height: 20px;"                                     aria-owns="calendarjqxWidget18e387f6" aria-haspopup="true" aria-readonly="false"                                     class="jqx-widget jqx-datetimeinput jqx-input jqx-overflow-hidden jqx-rc-all jqx-reset jqx-clear jqx-widget-content"                                     aria-valuenow="Thu Jun 01 2017 00:00:00 GMT-0500 (Central Daylight Time)"                                     aria-valuetext="00:00"                                     aria-valuemin="Mon Jan 01 1900 00:00:00 GMT-0600 (Central Standard Time)"                                     aria-valuemax="Invalid Date" aria-disabled="false"                                     aria-label="Current focused date is 6/1/2017, 12:00:00 AM">                                    <div class="jqx-max-size jqx-position-relative"><input                                            style="border: none; padding: 2px 3px; width: 50px; left: 0px; top: 0px; text-align: left;"                                            class="jqx-position-absolute jqx-reset jqx-clear jqx-input-content jqx-widget-content jqx-rc-all"                                            id="inputendtime" autocomplete="off" type="textarea" placeholder=""                                            disabled="disabled">                                        <div style="height: 100%; display: none; width: 19px; left: 51px;"                                             class="jqx-position-absolute jqx-action-button jqx-fill-state-normal jqx-default">                                            <div class="jqx-icon jqx-icon-calendar"></div>                                        </div>                                        <div style="height: 100%; width: 19px; left: 51px;"                                             class="jqx-position-absolute jqx-action-button jqx-default jqx-fill-state-normal jqx-rc-r">                                            <div class="jqx-icon jqx-icon-time"></div>                                        </div>                                    </div>                                </div>                            </div>                        </div>                        <div class="separator"></div>                        <div id="advanceSearchDivWrapper">                            <div id="filterDiv">                                <div class="filterSearchRow" id="advanceSearchLines"><span                                        class="half-box half-box-filter"><input type="text" placeholder="Lines"                                                                                id="idFilter0" data-type="string"                                                                                label="Lines"                                                                                class="searchFilters ui-autocomplete-input"                                                                                autocomplete="off"></span></div>                                <div class="filterSearchRow" id="advanceSearchProduct"><span                                        class="half-box half-box-filter"><input type="text" placeholder="Product"                                                                                id="idFilter1" data-type="string"                                                                                label="Product"                                                                                class="searchFilters ui-autocomplete-input"                                                                                autocomplete="off"></span></div>                                <div class="filterSearchRow" id="advanceSearchEquipment"><span                                        class="half-box half-box-filter"><input type="text" placeholder="Equipment"                                                                                id="idFilter2" data-type="string"                                                                                label="Equipment"                                                                                class="searchFilters ui-autocomplete-input"                                                                                autocomplete="off"></span></div>                                <div class="filterSearchRow" id="advanceSearchPartNumber"><span                                        class="half-box half-box-filter"><input type="text" placeholder="Part Number"                                                                                id="idFilter3" data-type="string"                                                                                label="PartNumber"                                                                                class="searchFilters ui-autocomplete-input"                                                                                autocomplete="off"></span></div>                                <div class="filterSearchRow" id="advanceSearchReelBarcode"><span                                        class="half-box half-box-filter"><input type="text" placeholder="Reel Barcode"                                                                                id="idFilter4" data-type="string"                                                                                label="ReelBarcode"                                                                                class="searchFilters ui-autocomplete-input"                                                                                autocomplete="off"></span></div>                                <div class="filterSearchRow" id="advanceSearchFeeder"><span                                        class="half-box half-box-filter"><input type="text" placeholder="Feeder"                                                                                id="idFilter5" data-type="string"                                                                                label="Feeder"                                                                                class="searchFilters ui-autocomplete-input"                                                                                autocomplete="off"></span></div>                            </div>                        </div>                    </div>                </div>                <div id="filtersButton">                    <span class="user-actions  user-actions-report LCStrings" id="reportsSubmit"> Submit </span>                </div>            </section>        </div>        <div class="col-md-8">            <div id="chartdiv" style="width:100%; height:400px;"></div>        </div>    </div>    <footer>        <p>&copy; William Jiang 2017</p>    </footer></div><!-- /container --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script><script src="js/vendor/bootstrap.min.js"></script><script src="js/pubsub.js"></script><script src="js/helper.js"></script><script src="js/charts.js"></script><script src="js/countdown.js"></script><script src="js/main.js"></script></body></html>
