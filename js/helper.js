@@ -59,4 +59,5 @@ var pCIMHelper = (function (store, $) {
         localStore: localStore,
         logger: logger,
     }
+
 })(pCIM.filterStore, jQuery);

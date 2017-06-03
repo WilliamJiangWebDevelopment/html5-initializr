@@ -8,8 +8,8 @@ $(document).ready(function () {
     }
 
     $.subscribe('foo', createLogger('foo'));
-    $.subscribe('foo.bar', createLogger('foo.bar'));
 
+    $.subscribe('foo.bar', createLogger('foo.bar'));
 
     $('input', 'div#advanceSearchDivWrapper').on('blur', function (e) {
         console.log('changed', $(e.target).val())
@@ -18,8 +18,24 @@ $(document).ready(function () {
     });
 
     $('#reportsSubmit').on('click', function (e) {
-        $.publish('foo.bar', [3, 4]);
+        var jsonFile = 'js/chartData.json';
+
+        // then() or done()?
+        // jqXHR.done === jqXHR.success,  jqXHR.fail === jqXHR.error
+        $.getJSON(jsonFile, function (data) {
+            //1. save filterStore
+            $.publish('foo.bar', data);
+        }).done(function (data) {
+            //2. draw the picture
+            console.log('draw.', data)
+        }).done(function (data) {
+            //3. select2 append tag
+        }).fail(function (e) {
+            throw e;
+        });
+
         return false;
     })
+
 });
 
