@@ -1,15 +1,10 @@
-'use strict';
+var pCIMHelper = (function () {
 
-var pCIM = window.pCIM || {};
-pCIM.filterStore = pCIM.filterStore || {};
+    var store = {AppState: 'filterState'};
 
-var pCIMHelper = (function (store, $) {
-
-    var localStore = {AppState: 'filterState'}
-
-    localStore.loadState = function loadState() {
+    store.loadState = function () {
         try {
-            var serializedState = localStorage.getItem(this.AppState);
+            var serializedState = sessionStorage.getItem(this.AppState);
             if (serializedState === null) {
                 return undefined;
             }
@@ -20,17 +15,17 @@ var pCIMHelper = (function (store, $) {
         }
     }
 
-    localStore.saveState = function (state) {
+    store.saveState = function (state) {
         try {
             const serializedState = JSON.stringify(state);
-            localStorage.setItem(this.AppState, serializedState);
+            sessionStorage.setItem(this.AppState, serializedState);
         } catch (err) {
             // Ignore write errors.
         }
     }
 
-    localStore.removeState = function () {
-        localStorage.removeItem(this.AppState);
+    store.removeState = function () {
+        sessionStorage.removeItem(this.AppState);
     }
 
     var logger = function (action) {
@@ -43,21 +38,20 @@ var pCIMHelper = (function (store, $) {
         return returnValue;
     }
 
-    var init = function (url, params, callback) {
-        return delay(500).then(function() {
-            $.getJSON(url, params, callback);
-        });
-    }
-
     var delay = function (ms) {
         return new Promise(function (resolve) {
             return setTimeout(resolve, ms)
         });
     }
 
-    return {
-        localStore: localStore,
-        logger: logger,
+    var init = function (url, params, callback) {
+        return delay(500).then(function () {
+            $.getJSON(url, params, callback);
+        });
     }
 
-})(pCIM.filterStore, jQuery);
+    return {
+        store: store,
+        logger: logger,
+    }
+})();
