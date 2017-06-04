@@ -8,6 +8,7 @@ $(document).ready(function () {
     }
 
     $.subscribe('foo', createLogger('foo'));
+
     $.subscribe('foo.bar', createLogger('foo.bar'));
 
     $.subscribe('oee', function () {
@@ -141,11 +142,25 @@ $(document).ready(function () {
 
     $('#reportsSubmit').on('click', function (e) {
 
-        getDataFromJSON('data/oee1.json', loadChartDataOEE);
+        var jsonFile = 'data/chartData.json';
+        // getDataFromJSON('data/oee1.json', loadChartDataOEE);
+
+        // then() or done()?
+        // jqXHR.done === jqXHR.success,  jqXHR.fail === jqXHR.error
+        $.getJSON(jsonFile, function (data) {
+            //1. save filterStore
+            $.publish('foo.bar', data);
+        }).done(function (data) {
+            //2. draw the picture
+            console.log('draw.', data)
+        }).done(function (data) {
+            //3. select2 append tag
+        }).fail(function (e) {
+            throw e;
+        });
 
         return false;
     });
-
 
     $('#radioDivWrapper').on('click', function (e) {
 
@@ -159,5 +174,14 @@ $(document).ready(function () {
     $('#dateTimeDivWrapper').on('click', function (e) {
 
     });
+
+    $('div.get-selection-object').on('click', 'li.flex-column.flex-md-row', function () {
+        console.log('click me')
+    });
+
+    $('div.get-selection-object').on('click', 'li.clear', function() {
+        console.log('li.clear');
+    })
+
 });
 
