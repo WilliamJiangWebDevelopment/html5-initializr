@@ -10,7 +10,7 @@ $(document).ready(function () {
     $.subscribe('foo', createLogger('foo'));
     $.subscribe('foo.bar', createLogger('foo.bar'));
 
-    $.subscribe('oee', function() {
+    $.subscribe('oee', function () {
         console.log('oee subscribe -> ', arguments);
         var filter = arguments[1].filter;
         var data = arguments[1].data
@@ -25,20 +25,37 @@ $(document).ready(function () {
     function getDataFromJSON(jsonFile, callback) {
         $.getJSON(jsonFile)
             .done(function (result) {
-                console.log(JSON.stringify(result[0].data));
+                //console.log(JSON.stringify(result[0].data));
                 callback(result)
             })
-            .done(function(result) {
+            .done(function (result) {
                 // save in sessionStore
                 pCIMHelper.store.saveState(result);
             })
-            .done(function(result) {
+            .done(function (result) {
                 // save in mutable filterObj
                 $.publish('oee', result);
             })
             .fail(function (err) {
                 throw err;
             })
+    }
+
+    function getColors() {
+        return {
+            'BottomGaugeText': '#ofa1ea',
+            'GaugeDefaultText': '#808185',
+            'GaugeRedText': '#FF5558',
+        };
+    }
+
+    function thresholdDefaults() {
+        var config = window.config || {};
+        config.boardThreshold = config.boardThreshold || [65, 80];
+        config.oeeThreshold = config.oeeThreshold || [65, 80];
+        config.oeeQualityThreshold = config.oeeQualityThreshold || [65, 80];
+        config.placementThreshold = config.placementThreshold || [90, 95];
+        return config;
     }
 
     function getWorst(od) {
@@ -49,9 +66,36 @@ $(document).ready(function () {
         }
     }
 
+    var defer = function (ms) {
+        return new Promise(function (resolve) {
+            return setTimeout(resolve, ms)
+        });
+    }
+
+    var setMouse = function (divID) {
+        $('#' + divID).mousemove(function (e) {
+            var b = document.getElementById("balloon");
+            b.innerHTML = 'tooltipText';
+            b.style.display = "block";
+            b.style.top = e.pageY + 'px';
+            b.style.left = e.pageX + 'px';
+        }).mouseleave(function (e) {
+            var b = document.getElementById("balloon");
+            b.innerHTML = "";
+            b.style.display = "none";
+        }).click(function (e) {
+            console.log('click me', e.target)
+        }).css({
+            'cursor': 'pointer',
+            'color': 'red'
+        });
+    }
+
     function loadChartDataOEE(OEEData, next) {
 
         var oeeAry = ['chartdiv', 'chartdiv1', 'chartdiv2'];
+        var config = thresholdDefaults();
+        var colors = getColors();
 
         oeeAry.forEach(function (cdiv) {
             document.getElementById(cdiv).innerHTML = '';
@@ -63,22 +107,36 @@ $(document).ready(function () {
         oeeObj[oeeAry[1]] = od[0] ? getWorst(od[0]) : {};
         oeeObj[oeeAry[2]] = od[1] ? getWorst(od[1]) : {};
 
-        console.log(oeeObj)
-        // oeeAry.forEach(function (c) {
-        //     drawgauge2(
-        //         c,
-        //         oeeObj[c].percentage,
-        //         config.oeeThreshold,
-        //         [{text: oeeObj[c].percentage + "%", color: COLORS.GaugeDefaultText}],
-        //         oeeObj[c].label,
-        //         gaugeBalloonText
-        //     )
-        // });
+        var od0 = {percentage: 50};
+        drawgauge2("chartdiv", od0.percentage, config.oeeThreshold,
+            [{text: od0.percentage + "%", color: colors.GaugeDefaultText, size: 12}],
+            "Average", 'gaugeBalloonText - chartdiv');
+
+        var od1 = oeeObj.chartdiv1;
+        defer(0).then(function () {
+            return drawgauge2('chartdiv1', od1.percentage, config.oeeThreshold, [{
+                    text: od1.percentage + "%",
+                    color: colors.GaugeDefaultText
+                }],
+                od1.label, 'gaugeBalloonText - chartdiv1');
+        }).then(function () {
+            setMouse('chartdiv1');
+        });
+
+        var od2 = oeeObj.chartdiv2;
+        defer(0).then(function () {
+            drawgauge2('chartdiv2', od2.percentage, config.oeeThreshold, [{
+                    text: od2.percentage + "%",
+                    color: colors.GaugeDefaultText
+                }],
+                od2.label, 'gaugeBalloonText - chartdiv2')
+        }).then(function () {
+            setMouse('chartdiv2');
+        });
 
         if (next && typeof next === 'function') {
             next(OEEData)
         }
-
     }
 
     $('#reportsSubmit').on('click', function (e) {

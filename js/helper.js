@@ -38,14 +38,11 @@ var pCIMHelper = (function () {
         return returnValue;
     }
 
-    var delay = function (ms) {
-        return new Promise(function (resolve) {
+    var init = function (url, params, callback) {
+        var defer = new Promise(function (resolve) {
             return setTimeout(resolve, ms)
         });
-    }
-
-    var init = function (url, params, callback) {
-        return delay(500).then(function () {
+        return defer(500).then(function () {
             $.getJSON(url, params, callback);
         });
     }
