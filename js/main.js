@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $.subscribe('foo.bar', createLogger('foo.bar'));
 
-    $.subscribe('oee', function() {
+    $.subscribe('oee', function () {
         console.log('oee subscribe -> ', arguments);
         var filter = arguments[1].filter;
         var data = arguments[1].data
@@ -29,11 +29,11 @@ $(document).ready(function () {
                 console.log(JSON.stringify(result[0].data));
                 callback(result)
             })
-            .done(function(result) {
+            .done(function (result) {
                 // save in sessionStore
                 pCIMHelper.store.saveState(result);
             })
-            .done(function(result) {
+            .done(function (result) {
                 // save in mutable filterObj
                 $.publish('oee', result);
             })
@@ -116,6 +116,14 @@ $(document).ready(function () {
     $('#dateTimeDivWrapper').on('click', function (e) {
 
     });
+
+    $('div.get-selection-object').on('click', 'li.flex-column.flex-md-row', function () {
+        console.log('click me')
+    });
+
+    $('div.get-selection-object').on('click', 'li.clear', function() {
+        console.log('li.clear');
+    })
 
 });
 
