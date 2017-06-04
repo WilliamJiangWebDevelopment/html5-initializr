@@ -74,22 +74,24 @@ $(document).ready(function () {
     }
 
     var setMouse = function (divID) {
-        $('#' + divID).mousemove(function (e) {
-            var b = document.getElementById("balloon");
-            b.innerHTML = 'tooltipText';
-            b.style.display = "block";
-            b.style.top = e.pageY + 'px';
-            b.style.left = e.pageX + 'px';
-        }).mouseleave(function (e) {
-            var b = document.getElementById("balloon");
-            b.innerHTML = "";
-            b.style.display = "none";
-        }).click(function (e) {
-            console.log('click me', e.target)
-        }).css({
-            'cursor': 'pointer',
-            'color': 'red'
-        });
+        $('#' + divID)
+            .mousemove(function (e) {
+                var b = document.getElementById("balloon");
+                b.innerHTML = 'tooltipText';
+                b.style.display = "block";
+                b.style.top = e.pageY + 'px';
+                b.style.left = e.pageX + 'px';
+            })
+            .mouseleave(function (e) {
+                var b = document.getElementById("balloon");
+                b.innerHTML = "";
+                b.style.display = "none";
+            })
+            .find('text:first').addClass('worstLink')
+            .andSelf()
+            .on('click', 'text.worstLink', function (e) {
+                console.log('click me', e.target)
+            });
     }
 
     function loadChartDataOEE(OEEData, next) {
