@@ -74,8 +74,8 @@
     height: 0;
     margin-left: .3em;
     vertical-align: middle;
-    border-top: 0;
-    border-bottom: .3em solid;
+    border-top: .3em solid;
+    border-bottom: 0;
     border-right: .3em solid transparent;
     border-left: .3em solid transparent;
     content: "";

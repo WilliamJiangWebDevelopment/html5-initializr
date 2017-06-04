@@ -184,17 +184,19 @@ $(document).ready(function () {
             $('#reportsSubmit').trigger('click');
             return false;
         })
-        .on('click', 'div.dropdown-menu', function () {
-            $(this).toggle();
+        .on('click', 'button.dropdown-toggle', function () {
+            $('div.dropdown-menu').toggle();
             return false;
         })
-        .on('click', 'div.dropdown>button.close', function (e) {
+        .on('click', 'span.dropdown-item>button.close', function (e) {
             $(e.target).closest('span.dropdown-item').remove();
             if ($('div.dropdown span.dropdown-item').length === 0) {
                 $('div.dropdown').closest('li').remove();
+                $('<li class="no-selections">None</li>').insertAfter('.lines-selection li:first-child');
+                $('.lines-selection li:last-child').hide();
             }
             else {
-                $('div.dropdown-menu').trigger('click');
+                $('button.dropdown-toggle').trigger('click');
             }
             $('#reportsSubmit').trigger('click');
             return false;
@@ -226,17 +228,19 @@ $(document).ready(function () {
     })();
 
     var selectMultiItems = (function () {
-        var $div = $('div.lines-selection ul');
+        var $ul = $('div.lines-selection ul');
         var menu = [
             '<li>',
             '   <div class="dropdown">',
             '       <button class="btn btn-secondary dropdown-toggle" type="button">',
+            'User Full Name : 3 of 388',
             '       </button>',
             '       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">',
             '       </div>',
             '   </div>',
             '</li>'
         ]
+        $(menu.join('\n')).insertAfter('div.lines-selection ul li:first-child');
         var item = [
             '   <span class="dropdown-item">',
             '       <button type="button" class="close" aria-label="Close">',
@@ -244,11 +248,18 @@ $(document).ready(function () {
             '       </button>',
             '   </span>',
         ];
-        return function (item) {
-            item = item || 'Charlie Sheen';
-
+        return function (text) {
+            text = text || 'Charlie Sheen';
+            var s = item.slice(0, 1).concat(text, item.slice(1));
+            $('div.dropdown-menu').append(s.join('\n'));
         }
     }());
+
+    selectMultiItems();
+    selectMultiItems('Orval  Ebner');
+    selectMultiItems('Terrence  Knight');
+    selectMultiItems('Val  Conforto');
+
 
 });
 
