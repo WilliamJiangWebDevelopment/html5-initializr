@@ -142,8 +142,10 @@ $(document).ready(function () {
 
     $('#reportsSubmit').on('click', function (e) {
 
+        getDataFromJSON('data/oee1.json', loadChartDataOEE);
+
+        return;
         var jsonFile = 'data/chartData.json';
-        // getDataFromJSON('data/oee1.json', loadChartDataOEE);
 
         // then() or done()?
         // jqXHR.done === jqXHR.success,  jqXHR.fail === jqXHR.error
@@ -175,13 +177,78 @@ $(document).ready(function () {
 
     });
 
-    $('div.get-selection-object').on('click', 'li.flex-column.flex-md-row', function () {
-        console.log('click me')
-    });
 
-    $('div.get-selection-object').on('click', 'li.clear', function() {
-        console.log('li.clear');
-    })
+    $('div.lines-selection')
+        .on('click', 'div.gauge-item>button.close', function (e) {
+            $(e.target).closest('li').remove();
+            $('#reportsSubmit').trigger('click');
+            return false;
+        })
+        .on('click', 'div.dropdown-menu', function () {
+            $(this).toggle();
+            return false;
+        })
+        .on('click', 'div.dropdown>button.close', function (e) {
+            $(e.target).closest('span.dropdown-item').remove();
+            if ($('div.dropdown span.dropdown-item').length === 0) {
+                $('div.dropdown').closest('li').remove();
+            }
+            else {
+                $('div.dropdown-menu').trigger('click');
+            }
+            $('#reportsSubmit').trigger('click');
+            return false;
+        })
+        .on('click', 'li.clear', function (e) {
+            $("ul li:not(:first-child):not(:last-child)").remove();
+            $('<li class="no-selections">None</li>').insertBefore(this);
+            $(this).hide();
+            $('#reportsSubmit').trigger('click');
+            return false;
+        });
+
+    var selectSingleItem = (function () {
+        var li = [
+            '<li>',
+            '   <div class="gauge-item">',
+            '       <button type="button" class="close" aria-label="Close">',
+            '           <span aria-hidden="true"> ×</span>',
+            '       </button>',
+            '   </div>',
+            '</li>'
+        ];
+        var $div = $('div.lines-selection ul');
+        return function (text) {
+            text = text || 'Opportunity Close MonthYear: Feb 2016';
+            var s = li.slice(0, 2).concat('<span>' + text + '</span>', li.slice(2));
+            $div.append(s.join('\n'));
+        }
+    })();
+
+    var selectMultiItems = (function () {
+        var $div = $('div.lines-selection ul');
+        var menu = [
+            '<li>',
+            '   <div class="dropdown">',
+            '       <button class="btn btn-secondary dropdown-toggle" type="button">',
+            '       </button>',
+            '       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">',
+            '       </div>',
+            '   </div>',
+            '</li>'
+        ]
+        var item = [
+            '   <span class="dropdown-item">',
+            '       <button type="button" class="close" aria-label="Close">',
+            '           <span aria-hidden="true">×</span>',
+            '       </button>',
+            '   </span>',
+        ];
+        return function (item) {
+            item = item || 'Charlie Sheen';
+
+        }
+    }());
 
 });
 

@@ -163,7 +163,8 @@ button {
 }
 
 /*side menu bar*/
-.done:before { /*success icon*/
+.done:before {
+    /*success icon*/
     content: "";
     height: 1rem;
     width: 1rem;
@@ -881,7 +882,8 @@ input[type=range]::-ms-tooltip {
     height: 100%;
 }
 
-.calender .top-menu:after { /*version icon*/
+.calender .top-menu:after {
+    /*version icon*/
     content: "";
     background: url("../img/versionHeader.png") center no-repeat;
     width: 1.25rem;
@@ -1690,11 +1692,13 @@ input[type=range]::-ms-tooltip {
 }
 
 /*alternate row colors*/
-.product .row:nth-child(even):not(.selected-row) { /*(even) or (2n 0)*/
+.product .row:nth-child(even):not(.selected-row) {
+    /*(even) or (2n 0)*/
     background: #ffffff;
 }
 
-.product .row:nth-child(odd):not(.selected-row) { /*(odd) or (2n 1)*/
+.product .row:nth-child(odd):not(.selected-row) {
+    /*(odd) or (2n 1)*/
     background: #f7f7f7;
 }
 
@@ -2774,7 +2778,8 @@ ul {
 
 /*column layout*/
 
-.material-verification-control .done:before { /*success icon*/
+.material-verification-control .done:before {
+    /*success icon*/
     content: "";
     height: 1rem;
     width: 1rem;
@@ -5994,14 +5999,14 @@ div.separator {
 .lineBlock #rearOuterWA {
     height: 25%;
     width: 100%;
-/ / margin-left: 25 %;
+/ / margin-left : 25 %;
 }
 
 .lineBlock #frontOuterWA {
     height: 25%;
     width: 100%;
-/ / margin-left: 26 %;
-/ / margin-top: 50 %;
+/ / margin-left : 26 %;
+/ / margin-top : 50 %;
     bottom: 0;
     position: absolute;
 }
@@ -6553,7 +6558,8 @@ button {
 }
 
 /*side menu bar*/
-.done:before { /*success icon*/
+.done:before {
+    /*success icon*/
     content: "";
     height: 1rem;
     width: 1rem;
@@ -7550,7 +7556,8 @@ body > * {
     height: 100%;
 }
 
-.calender .top-menu:after { /*version icon*/
+.calender .top-menu:after {
+    /*version icon*/
     content: "";
     background: url("../img/versionHeader.png") center no-repeat;
     width: 1.25rem;
@@ -8360,11 +8367,13 @@ body > * {
 }
 
 /*alternate row colors*/
-.product .row:nth-child(even):not(.selected-row) { /*(even) or (2n 0)*/
+.product .row:nth-child(even):not(.selected-row) {
+    /*(even) or (2n 0)*/
     background: #ffffff;
 }
 
-.product .row:nth-child(odd):not(.selected-row) { /*(odd) or (2n 1)*/
+.product .row:nth-child(odd):not(.selected-row) {
+    /*(odd) or (2n 1)*/
     background: #f7f7f7;
 }
 
@@ -9633,7 +9642,8 @@ ul {
 
 /*column layout*/
 
-.material-verification-control .done:before { /*success icon*/
+.material-verification-control .done:before {
+    /*success icon*/
     content: "";
     height: 1rem;
     width: 1rem;
@@ -13229,7 +13239,8 @@ div.separator {
     width: 270px; /*This gets around a weird issue where the divs (e.g., product_name and quantity) don't line up nicely */
 }
 
-.e-link .regex-name-icon { /*Note that :after on select is ineffective*/
+.e-link .regex-name-icon {
+    /*Note that :after on select is ineffective*/
     background: url("../img/icon-down.png") no-repeat;
     background-size: contain;
     width: 15px;
@@ -13351,7 +13362,8 @@ div.separator {
 .elink-validate-table th {
     color: darkslategray;
     text-decoration: underline;
-    /*border-bottom: 1px solid black;*/ /*Horizontal line doesn't work in table*/
+    /*border-bottom: 1px solid black;*/
+    /*Horizontal line doesn't work in table*/
 }
 
 .elink-validate-table td, .elink-validate-table th {
@@ -13402,13 +13414,15 @@ div.separator {
     background: #0fa1ea;
 }
 
-.ui-tooltip { /*Overriding built-in jQuery Tooltip style*/
+.ui-tooltip {
+    /*Overriding built-in jQuery Tooltip style*/
     max-width: fit-content;
     background: #ffa;
     font-size: 14px;
 }
 
-.ui-tooltip-content { /*Overriding built-in jQuery Tooltip style*/
+.ui-tooltip-content {
+    /*Overriding built-in jQuery Tooltip style*/
 }
 
 .elink-validate-hint {
@@ -15794,86 +15808,4 @@ div#advanceSearchTime {
     height: 50%;
     overflow: hidden;
     text-align: left;
-}
-
-/* william */
-
-.get-selection-object {
-    font-size: 14px;
-    padding: 15px 0;
-    display: inline-block
-}
-
-.get-selection-object .btn {
-    padding: 10px 15px
-}
-
-.get-selection-object .close {
-    margin-left: 0 !important;
-    padding-left: 2px
-}
-
-.get-selection-object ul, .multi-get-object ul {
-    width: 100%;
-    height: 90%;
-    margin: 0;
-    list-style-type: none
-}
-
-.get-selection-object ul {
-    padding: 0;
-    -webkit-flex-direction: row;
-    display: flex;
-    flex-direction: row
-}
-
-.get-selection-object ul li {
-    font-size: 14px;
-    text-align: left;
-    padding-right: 15px
-}
-
-.get-selection-object ul li:first-child {
-    padding-left: 0
-}
-
-.get-selection-object ul li.clear {
-    font-style: italic;
-    color: #00f
-}
-
-.get-selection-object ul li a {
-    color: #000;
-    text-decoration: none
-}
-
-.get-selection-object ul li a:hover {
-    color: #77b62a;
-    text-decoration: underline
-}
-
-.get-selection-object ul li .fa-times-circle-o {
-    cursor: pointer;
-    color: red
-}
-
-.get-selection-object .dropdown-menu {
-    font-size: 14px;
-    padding: 0
-}
-
-.get-selection-object .dropdown-menu .dropdown-item {
-    padding: 3px 7px
-}
-
-.get-selection-object .btn.btn-secondary.dropdown-toggle {
-    background-color: #fff;
-    padding: 0;
-    border: 0;
-    font-size: 14px
-}
-
-.get-selection-object .no-selections {
-    font-style: italic;
-    color: #CCC
 }
