@@ -1,25 +1,13 @@
 $(document).ready(function () {
 
-    function createLogger(name) {
-        return function (_, a, b) {
-            // Skip the first argument (event object) but log the name and other args.
-            console.log(name, a, b);
-        };
-    }
-
-    $.subscribe('foo', createLogger('foo'));
-
-    $.subscribe('foo.bar', createLogger('foo.bar'));
-
     $.subscribe('oee', function () {
-        console.log('oee subscribe -> ', arguments);
+        console.log('oee subscribe -> ', arguments[1]);
         var filter = arguments[1].filter;
         var data = arguments[1].data
     })
 
     $('input', 'div#advanceSearchDivWrapper').on('blur', function (e) {
         console.log('changed', $(e.target).val())
-        $.publish('foo', 1);
         e.preventDefault();
     });
 
@@ -87,12 +75,31 @@ $(document).ready(function () {
                 b.innerHTML = "";
                 b.style.display = "none";
             })
-            .find('text:first').addClass('worstLink')
+            .find('text:first').attr('fill', 'blue').css('cursor', 'pointer')
             .andSelf()
-            .on('click', 'text.worstLink', function (e) {
-                console.log('click me', e.target)
+            .on('click', 'text:first', function (e) {
+                var t = $(e.target).text();
+                var owd = oee2WorstDetails();
+                var worst = owd.find(function (obj) {
+                    return obj.min_oee_key === t;
+                });
+                console.log('add condition:', worst);
+                //$('#reportsSubmit').trigger('click');
             });
     }
+
+    var oee2WorstDetails = (function () {
+        var worst2DetailsAry = [];
+        return function (details) {
+            if (details) {
+                worst2DetailsAry = details.slice(0, 2);
+                console.log('11111', worst2DetailsAry);
+            }
+            else {
+                return worst2DetailsAry;
+            }
+        }
+    }());
 
     function loadChartDataOEE(OEEData, next) {
 
@@ -105,6 +112,10 @@ $(document).ready(function () {
         });
 
         var od = OEEData[0].data.details;
+
+        oee2WorstDetails(od);
+
+        //TODO:
         var oeeObj = {};
         oeeObj[oeeAry[0]] = {};
         oeeObj[oeeAry[1]] = od[0] ? getWorst(od[0]) : {};
@@ -153,7 +164,7 @@ $(document).ready(function () {
         // jqXHR.done === jqXHR.success,  jqXHR.fail === jqXHR.error
         $.getJSON(jsonFile, function (data) {
             //1. save filterStore
-            $.publish('foo.bar', data);
+            //$.publish('foo.bar', data);
         }).done(function (data) {
             //2. draw the picture
             console.log('draw.', data)

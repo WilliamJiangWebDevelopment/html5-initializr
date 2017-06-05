@@ -162,9 +162,3 @@
     background-image: none;
     border-color: #adadad
 }
-
-text.worstLink {
-    cursor: pointer;
-    color: blue;
-    text-underline: none;
-}
