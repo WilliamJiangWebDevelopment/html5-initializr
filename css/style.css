@@ -41,7 +41,7 @@
     font-style: italic;
     color: #00f;
     cursor: pointer;
-    /*display: none;*/
+    display: none;
 }
 
 .lines-selection ul li.clear:hover {
@@ -154,6 +154,11 @@
 .lines-selection .btn-secondary.focus {
     -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
     box-shadow: 0 0 0 2px rgba(204, 204, 204, .5)
+}
+
+.lines-selection .no-selections {
+    font-style: italic;
+    color: #CCC
 }
 
 .btn-secondary.active, .btn-secondary:active, .show > .btn-secondary.dropdown-toggle {
