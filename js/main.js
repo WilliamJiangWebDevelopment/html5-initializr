@@ -277,37 +277,37 @@ $(document).ready(function () {
         }
     })();
 
-    //var selectMultiItems = (function () {
-    //    var $ul = $('div.lines-selection ul');
-    //    var menu = [
-    //        '<li>',
-    //        '   <div class="dropdown">',
-    //        '       <button class="btn btn-secondary dropdown-toggle" type="button">',
-    //        'User Full Name : 3 of 388',
-    //        '       </button>',
-    //        '       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">',
-    //        '       </div>',
-    //        '   </div>',
-    //        '</li>'
-    //    ]
-    //    $(menu.join('\n')).insertAfter('div.lines-selection ul li:first-child');
-    //    var item = [
-    //        '   <span class="dropdown-item">',
-    //        '       <button type="button" class="close" aria-label="Close">',
-    //        '           <span aria-hidden="true">×</span>',
-    //        '       </button>',
-    //        '   </span>',
-    //    ];
-    //    return function (text) {
-    //        text = text || 'Charlie Sheen';
-    //        var s = item.slice(0, 1).concat(text, item.slice(1));
-    //        $('div.dropdown-menu').append(s.join('\n'));
-    //    }
-    //}());
+    var selectMultiItems = (function () {
+       var $ul = $('div.lines-selection ul');
+       var menu = [
+           '<li>',
+           '   <div class="dropdown">',
+           '       <button class="btn btn-secondary dropdown-toggle" type="button">',
+           'User Full Name : 3 of 388',
+           '       </button>',
+           '       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">',
+           '       </div>',
+           '   </div>',
+           '</li>'
+       ]
+       $(menu.join('\n')).insertAfter('div.lines-selection ul li:first-child');
+       var item = [
+           '   <span class="dropdown-item">',
+           '       <button type="button" class="close" aria-label="Close">',
+           '           <span aria-hidden="true">×</span>',
+           '       </button>',
+           '   </span>',
+       ];
+       return function (text) {
+           text = text || 'Charlie Sheen';
+           var s = item.slice(0, 1).concat(text, item.slice(1));
+           $('div.dropdown-menu').append(s.join('\n'));
+       }
+    }());
 
-    //selectMultiItems();
-    //selectMultiItems('Orval  Ebner');
-    //selectMultiItems('Terrence  Knight');
-    //selectMultiItems('Val  Conforto');
+    selectMultiItems();
+    selectMultiItems('Orval  Ebner');
+    selectMultiItems('Terrence  Knight');
+    selectMultiItems('Val  Conforto');
 });
 

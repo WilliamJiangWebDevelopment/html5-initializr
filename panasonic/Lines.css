@@ -1,0 +1,614 @@
+.lines a.sidebar-toggle {
+    display: block;
+}
+@media only screen and (min-width: 767px) {
+    .lines a.sidebar-toggle {
+        display: none;
+    }
+    .lines .tiles-box {
+        display: block;
+        min-height: 90px;
+        background: #fff;
+        width: 50%;
+        height: 168px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        border-radius: 2px;
+        border: 1px solid #c4c4c4;
+        margin-bottom: 0;
+    }
+}
+.lines #filter-div{
+    background: #e8f1f6;
+}
+.lines .title {
+    margin-top: 10px;
+    font-family: sans-serif;
+    word-spacing: 5px;
+    color: #ECECEC;
+    font-size: 20px;
+
+}
+.lines .btn-default1 {
+    background-color: #9C9C9C;
+    border-color: #6F6F6F;
+    color: white;
+}
+.lines .btn-default1.active, .lines .btn-default1.active:hover {
+    color: #0fa1ea;
+    background-color: #FFFFFF;
+    border-color: #adadad;
+}
+.lines .btn-default1:hover,.lines .btn-deafault1:focus {
+    color: white;
+    background-color: #808080;
+    border-color: #adadad;
+}
+
+.lines .btn-default2 {
+    color: white;
+    background-color: #b7b5b5;
+    border-color: #adadad;
+}
+.lines .btn-default2.active, .lines .btn-default2.active:hover {
+    color: #0fa1ea;
+    background-color: #FFFFFF;
+    border-color: #0fa1ea;
+}
+.lines .btn-default2:hover,.lines .btn-deafault2:focus {
+    color: white;
+    background-color: #808080;
+    border-color: #adadad;
+}
+.lines .btn-round-left{
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.lines .btn-round-right{
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;                      }
+
+
+.lines .tile{
+    padding: 6px!important;
+}
+.lines .tiles-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    height: 210px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    border: 1px solid #c4c4c4;
+    margin-bottom: 0;
+}
+.lines .tiles-header {
+    color: #808185;
+    padding: 5px;
+}
+
+.lines .tiles-box:hover, .lines  {
+    box-shadow: 4px 4px 5px rgba(160, 160, 160, 0.81);
+}
+
+.lines .tiles-box.active {
+    box-shadow: 4px 4px 5px rgba(160, 160, 160, 0.81);
+}
+.lines .tiles-box-icon {
+    font-size: 12px;
+    height:25px;
+    width:100%;
+}
+.lines .tiles-box-icon img{
+    width: 25px;
+}
+
+.lines .tiles-box-content {
+    width: 100%;
+    height: 170px;
+    padding: 3px;
+    margin-top: -30px;
+}
+.lines .tiles-box-text {
+    color: #808185;
+    width: calc(100% - 35px);
+    position: relative;
+    top: -4px;
+}
+
+.lines .active  .tiles-box-text {
+    color: rgb(17,160,230);
+}
+
+.lines .t-progress {
+    width:100%;
+}
+
+.lines .t-progress .t-split-small {
+    line-height: 4px;
+    font-size: 4px;
+}
+
+.lines .t-progress .t-split-big {
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.lines .t-progress .t-label {
+    font-size: 12px;
+    color: #0fa1ea;
+    text-align: right;
+    font-weight: 600;
+}
+
+.lines .t-progress .t-bar {
+    background:#f5f5f5;
+}
+
+.lines .t-progress .t-bar .t-100 {
+    margin:1px;
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.lines .t-progress .t-bar .t-val {
+    position:absolute;
+    left:0;
+    height:100%;
+    z-index: 9;
+    width:0;
+}
+
+.lines .t-progress .t-bar .t-val-text {
+    position:absolute;
+    color: rgb(119, 119, 119);
+    font-size: 11px;
+    right:0;
+    top: 2px;
+    z-index: 10;
+}
+
+.lines .t-progress .t-bar .t-info {
+    background-color: #96C0F6;
+}
+
+.lines .t-progress .t-bar .t-danger {
+    background-color: #FA9D99;
+}
+
+
+/* ========Country Tab CSS ===========*/
+.lines .btn-tab {
+    background: none;
+    border: none;
+
+    color: #7B7A7A;
+}
+.lines .btn-tab.active, .lines .btn-tab.active:hover {
+    color: #4A4A4A;
+    font-weight: bold;
+    box-shadow: none;
+    border-bottom: 3px solid #00c0ef;
+}
+.lines .btn-tab:hover,.lines .btn-tab:focus {
+    color: #777;
+    box-shadow: none;
+}
+/* ========Search text Box CSS ===========*/
+.lines #search-btn{
+    background: white;
+    border-width: 2px;
+    box-shadow: none;
+    width: 29px;
+    height: 34px;
+    border-right: none;
+    border-color: #A3A4A5;
+}
+.permission.lines .column1 *{
+    padding-top: 0px;
+}
+.lines #radioDiv{
+    margin-left: 6px;
+}
+.lines #sliderdiv{
+    width:110px;
+}
+.lines #searchControls{
+    margin-left: 6px;
+}
+.lines #advanceSearchDivWrapper{
+    margin-left: 6px;
+}
+.lines #input-search{
+    border-radius: 0;
+    border-width: 2px;
+    box-shadow: none;
+    color: #808185;
+    font-style: italic;
+    background: transparent;
+    border-color: #adadad;
+}
+.lines .demo, .lines .demo * {
+    background-color:rgba(255,255,255,0);
+
+}
+
+.lines .tile{
+    width: 25%;
+    float: left;
+}
+.drilldown{
+    margin-left: -5px;
+    height: calc(100% - 250px) !important;
+    max-height: calc(100% - 250px) !important;
+    display: inline-block !important;
+    overflow: auto;
+    border: 1px solid #c4c4c4;
+    box-shadow: 5px 5px 8px 0px #bbbbbb;
+}
+#chartdiv {
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+}			#chartdiv1 {
+                 width: 100%;
+                 height: 100%;
+
+                 overflow:hidden;
+             }			#chartdiv2 {
+                              width: 100%;
+                              height: 100%;
+
+                              overflow:hidden;
+                          }
+#chartdiv3 {
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+}
+#chartdiv4 {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+#chartdiv4_2 {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+#chartdiv5 {
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+}
+#chartdiv6 {
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+}
+#chartdiv7 {
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+}
+.oeechart{
+    width: 100%;
+    height: 100%;
+
+    overflow:hidden;
+
+}
+#lines #groupTable{
+    padding-top:10px;
+    padding-left:20px;
+}
+
+.lines #filtersButton{
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 20px);
+    /*top: 20%;*/
+    margin-right:10px;
+    height: 30px;
+}
+.lines .user-actions-report{
+    float:right;
+    padding-right:20px;
+    cursor: pointer;
+    color: #0fa1ea;
+    font-size: 18px;
+}
+
+.lines td, .lines th{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.lines table{
+    margin-bottom: 20px;
+}
+
+.lines #spanLeft, .lines #spanRight{
+    font-size: xx-large;
+    color: #11a1ea;
+    width: 5%;
+}
+
+.lines #spanLeft{
+    padding-left: 10px;
+    float: left;
+}
+
+.lines #spanRight{
+    float:right;
+    padding-right: 10px;
+}
+
+.lines #tableMainDiv table{
+    width: 100%;
+    float:left;
+    margin: 0 auto;
+}
+
+
+#balloon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 6px;
+    font-size: 12px;
+    color: #000;
+    margin: 20px 0 0 20px;
+}
+
+#drillDownErrorLegends .legend-item {
+    white-space: nowrap;
+}
+
+#drillDownErrorLegends .legend-item td {
+    font-size: 12px;
+    cursor: pointer;
+    color: black;
+    height: 20px;
+    text-align:right;
+}
+
+#drillDownErrorLegends .legend-item .category  {
+    text-align:left;
+}
+
+#drillDownErrorLegends .remove td {
+    color: silver;
+}
+
+#drillDownErrorLegends .legend-marker {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#drillDownErrorLegends .remove .legend-marker  {
+    opacity: 0.5;
+    background: #ddd;
+}
+
+.lines-title-box {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+}
+
+.lines-left-gauge {
+    position:absolute;
+    height:60%;
+    left:4%;
+    top: 40px;
+    width: 60%;
+}
+
+.lines-rt-gauge {
+    position: absolute;
+    height: 90px;
+    width: 45%;
+    top: 20px;
+    right:1%;
+}
+
+.lines-rb-gauge {
+    position: absolute;
+    height: 90px;
+    width: 45%;
+    bottom: 24px;
+    right:1%;
+}
+
+#chartdivPlacementRatio {
+    position:absolute;
+    left:0;
+    top:20px;
+    padding-right:130px;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    text-align: left;
+}
+
+
+.lines-selection {
+    font-size: 12px;
+    padding: 0;
+    display: inline-block;
+    z-index: 10;
+    color: rgb(0, 0, 0)
+}
+
+.lines-selection .btn {
+    padding: 10px 15px
+}
+
+.lines-selection ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5px 0 0 0;
+    list-style-type: none;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row
+}
+
+.lines-selection ul li {
+    font-size: 12px;
+    text-align: left;
+    padding-right: 15px
+}
+
+.lines-selection ul li:first-child {
+    padding-left: 0
+}
+
+.lines-selection ul li.stitle {
+    font-size: 14px;
+    margin: 0 12px 0 0;
+    padding: 0
+}
+
+.lines-selection ul li.clear {
+    font-style: italic;
+    color: #00f;
+    cursor: pointer;
+    display: none;
+}
+
+.lines-selection ul li.clear:hover {
+    color: #77b62a;
+    text-decoration: underline
+}
+
+.lines-selection .dropdown-menu {
+    padding: 0
+}
+
+.lines-selection .dropdown-menu .dropdown-item {
+    padding: 3px 7px
+}
+
+.lines-selection .btn.btn-secondary.dropdown-toggle {
+    background-color: #fff;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+}
+
+.lines-selection .btn.btn-secondary.dropdown-toggle:focus {
+    outline: 0
+}
+
+.lines-selection .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .3em;
+    vertical-align: middle;
+    border-top: .3em solid;
+    border-bottom: 0;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    content: "";
+}
+
+.lines-selection .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 12px;
+    color: #292b2c;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem
+}
+
+.lines-selection .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 3px 1.5rem;
+    clear: both;
+    color: #292b2c;
+    text-align: inherit;
+    background: 0 0;
+    border: 0
+}
+
+.lines-selection .dropdown-item:hover {
+    color: #1d1e1f;
+    background-color: #f7f7f9
+}
+
+.lines-selection .dropdown-item.active {
+    color: #fff;
+    background-color: #0275d8
+}
+
+.lines-selection .show > .dropdown-menu {
+    display: block
+}
+
+.lines-selection .show > a {
+    outline: 0
+}
+
+.lines-selection button.close {
+    float: right;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0
+}
+
+.lines-selection .btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.lines-selection .btn-secondary:hover {
+    color: #292b2c;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+.lines-selection .btn-secondary.focus {
+    -webkit-box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
+    box-shadow: 0 0 0 2px rgba(204, 204, 204, .5)
+}
+
+.lines-selection .no-selections {
+    font-style: italic;
+    color: #CCC
+}
+
+.btn-secondary.active, .btn-secondary:active, .show > .btn-secondary.dropdown-toggle {
+    color: #292b2c;
+    background-color: #e6e6e6;
+    background-image: none;
+    border-color: #adadad
+}

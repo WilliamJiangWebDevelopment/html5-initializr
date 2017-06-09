@@ -1,0 +1,205 @@
+var error = {
+    "error": null,
+    "total_error_ratio": 26.29,
+    "total_error_average": 25281,
+    "max_error_ratio_index": 6,
+    "max_error_average_index": 2,
+    "labels": {
+        "error_time": "Duration",
+        "error_count": "Error Count",
+        "total_error_ratio": "Total",
+        "total_error_average": "Avg. Duration",
+        "error_ratio": "Worst",
+        "error_average": "Worst",
+        "max_error_ratio": "Worst",
+        "max_error_average": "Worst"
+    },
+    "details": [
+        {
+            "name": "equipment_name",
+            "details": null,
+            "label": "Equipment",
+            "max_error_ratio_key": "NPM-D",
+            "max_error_ratio": 26.29,
+            "max_error_ratio_index": null,
+            "max_error_average_key": "NPM-D",
+            "max_error_average": 25281,
+            "max_error_average_index": null
+        },
+        {
+            "name": "error_name",
+            "details": [
+                {
+                    "error_name": "Conveyor Error",
+                    "error_time": 505509,
+                    "error_count": 23,
+                    "error_ratio": 13.14,
+                    "error_average": 21979,
+                    "error_count_ratio": 57.5,
+                    "error_time_ratio": 49.99
+                },
+                {
+                    "error_name": "Part Exhaust Stop",
+                    "error_time": 84967,
+                    "error_count": 2,
+                    "error_ratio": 2.21,
+                    "error_average": 42484,
+                    "error_count_ratio": 5,
+                    "error_time_ratio": 8.4
+                },
+                {
+                    "error_name": "Single Error Stop",
+                    "error_time": 420774,
+                    "error_count": 15,
+                    "error_ratio": 10.94,
+                    "error_average": 28052,
+                    "error_count_ratio": 37.5,
+                    "error_time_ratio": 41.61
+                }
+            ],
+            "label": "Error",
+            "max_error_ratio_key": "Conveyor Error",
+            "max_error_ratio": 13.14,
+            "max_error_ratio_index": 0,
+            "max_error_average_key": "Part Exhaust Stop",
+            "max_error_average": 42484,
+            "max_error_average_index": 1
+        },
+        {
+            "name": "interval",
+            "details": [
+                {
+                    "interval": "dec",
+                    "error_name": "Single Error Stop",
+                    "error_time": 0,
+                    "error_count": 0,
+                    "start_time": "2016-12-01 00:00:00",
+                    "end_time": "2017-01-01 00:00:00"
+                },
+                {
+                    "interval": "jan",
+                    "error_name": "Single Error Stop",
+                    "error_time": 0,
+                    "error_count": 0,
+                    "start_time": "2017-01-01 00:00:00",
+                    "end_time": "2017-02-01 00:00:00"
+                },
+                {
+                    "interval": "feb",
+                    "error_name": "Single Error Stop",
+                    "error_time": 0,
+                    "error_count": 0,
+                    "start_time": "2017-02-01 00:00:00",
+                    "end_time": "2017-03-01 00:00:00"
+                },
+                {
+                    "interval": "mar",
+                    "error_name": "Conveyor Error",
+                    "error_time": 505396,
+                    "error_count": 20,
+                    "start_time": "2017-03-01 00:00:00",
+                    "end_time": "2017-04-01 00:00:00"
+                },
+                {
+                    "interval": "mar",
+                    "error_name": "Single Error Stop",
+                    "error_time": 861,
+                    "error_count": 5,
+                    "start_time": "2017-03-01 00:00:00",
+                    "end_time": "2017-04-01 00:00:00"
+                },
+                {
+                    "interval": "apr",
+                    "error_name": "Conveyor Error",
+                    "error_time": 112,
+                    "error_count": 3,
+                    "start_time": "2017-04-01 00:00:00",
+                    "end_time": "2017-05-01 00:00:00"
+                },
+                {
+                    "interval": "apr",
+                    "error_name": "Part Exhaust Stop",
+                    "error_time": 27,
+                    "error_count": 1,
+                    "start_time": "2017-04-01 00:00:00",
+                    "end_time": "2017-05-01 00:00:00"
+                },
+                {
+                    "interval": "apr",
+                    "error_name": "Single Error Stop",
+                    "error_time": 419913,
+                    "error_count": 10,
+                    "start_time": "2017-04-01 00:00:00",
+                    "end_time": "2017-05-01 00:00:00"
+                },
+                {
+                    "interval": "may",
+                    "error_name": "Part Exhaust Stop",
+                    "error_time": 84940,
+                    "error_count": 1,
+                    "start_time": "2017-05-01 00:00:00",
+                    "end_time": "2017-06-01 00:00:00"
+                },
+                {
+                    "interval": "jun",
+                    "error_name": "Single Error Stop",
+                    "error_time": 0,
+                    "error_count": 0,
+                    "start_time": "2017-06-01 00:00:00",
+                    "end_time": "2017-07-01 00:00:00"
+                }
+            ],
+            "label": "Month",
+            "max_error_ratio_key": "apr",
+            "max_error_ratio": 49.11,
+            "max_error_ratio_index": null,
+            "max_error_average_key": "may",
+            "max_error_average": 84940,
+            "max_error_average_index": null
+        },
+        {
+            "name": "lane_no",
+            "details": null,
+            "label": "Lane",
+            "max_error_ratio_key": "1",
+            "max_error_ratio": 26.28,
+            "max_error_ratio_index": null,
+            "max_error_average_key": "1",
+            "max_error_average": 28082,
+            "max_error_average_index": null
+        },
+        {
+            "name": "product_name",
+            "details": null,
+            "label": "Product",
+            "max_error_ratio_key": "KPRODUCTA",
+            "max_error_ratio": 28.5,
+            "max_error_ratio_index": null,
+            "max_error_average_key": "KPRODUCTA",
+            "max_error_average": 36799,
+            "max_error_average_index": null
+        },
+        {
+            "name": "route_name",
+            "details": null,
+            "label": "Route",
+            "max_error_ratio_key": "LCLine-2",
+            "max_error_ratio": 26.29,
+            "max_error_ratio_index": null,
+            "max_error_average_key": "LCLine-2",
+            "max_error_average": 25281,
+            "max_error_average_index": null
+        },
+        {
+            "name": "shift_name",
+            "details": null,
+            "label": "Shift",
+            "max_error_ratio_key": "shift2",
+            "max_error_ratio": 79.18,
+            "max_error_ratio_index": null,
+            "max_error_average_key": "shift2",
+            "max_error_average": 27323,
+            "max_error_average_index": null
+        }
+    ]
+}
