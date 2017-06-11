@@ -1200,6 +1200,7 @@ var COLORS = {
             return timeString;
         },
 
+        //wiliam jiang
         searchWorstDetails: (function () {
             var worst2Details = {};
             return function (groupId, details) {

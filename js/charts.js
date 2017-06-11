@@ -75,3 +75,68 @@ function drawgauge2(divID, value, thresholds, innerTextArr, bottomText, lessIsBe
         }
     });
 }
+
+
+function loadChartDataOEE(OEEData, next) {
+
+    var oeeAry = ['chartdiv', 'chartdiv1', 'chartdiv2'];
+    var config = thresholdDefaults();
+    var colors = getColors();
+
+    oeeAry.forEach(function (cdiv) {
+        document.getElementById(cdiv).innerHTML = '';
+    });
+
+    var od = OEEData[0].data.details;
+
+    oee2WorstDetails(od);
+
+    //TODO:
+    var oeeObj = {};
+    oeeObj[oeeAry[0]] = {};
+    oeeObj[oeeAry[1]] = od[0] ? getWorst(od[0]) : {};
+    oeeObj[oeeAry[2]] = od[1] ? getWorst(od[1]) : {};
+
+    var od0 = {percentage: 50};
+    drawgauge2("chartdiv", od0.percentage, config.oeeThreshold,
+        [{text: od0.percentage + "%", color: colors.GaugeDefaultText, size: 12}],
+        "Average", 'gaugeBalloonText - chartdiv');
+
+    var od1 = oeeObj.chartdiv1;
+    defer(0).then(function () {
+        return drawgauge2('chartdiv1', od1.percentage, config.oeeThreshold, [{
+                text: od1.percentage + "%",
+                color: colors.GaugeDefaultText
+            }],
+            od1.label, 'gaugeBalloonText - chartdiv1');
+    }).then(function () {
+        setMouse('chartdiv1');
+    });
+
+    var od2 = oeeObj.chartdiv2;
+    defer(0).then(function () {
+        drawgauge2('chartdiv2', od2.percentage, config.oeeThreshold, [{
+                text: od2.percentage + "%",
+                color: colors.GaugeDefaultText
+            }],
+            od2.label, 'gaugeBalloonText - chartdiv2')
+    }).then(function () {
+        setMouse('chartdiv2');
+    });
+
+    if (next && typeof next === 'function') {
+        next(OEEData)
+    }
+}
+
+function loadChartDataPlacement() {
+
+}
+
+function loadChartDataBoard() {
+}
+
+function loadChartDataError() {
+}
+
+

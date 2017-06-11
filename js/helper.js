@@ -1,3 +1,22 @@
+
+function getColors() {
+    return {
+        'BottomGaugeText': '#ofa1ea',
+        'GaugeDefaultText': '#808185',
+        'GaugeRedText': '#FF5558',
+    };
+}
+
+function thresholdDefaults() {
+    var config = window.config || {};
+    config.boardThreshold = config.boardThreshold || [65, 80];
+    config.oeeThreshold = config.oeeThreshold || [65, 80];
+    config.oeeQualityThreshold = config.oeeQualityThreshold || [65, 80];
+    config.placementThreshold = config.placementThreshold || [90, 95];
+    return config;
+}
+
+
 var pCIMHelper = (function () {
 
     var store = {AppState: 'filterState'};

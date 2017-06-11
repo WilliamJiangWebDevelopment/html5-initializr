@@ -1,0 +1,143 @@
+{
+  "error": null,
+  "average_place_ratio": 99.67,
+  "total_place_count": 2109,
+  "total_pickup_count": 2116,
+  "labels": {
+    "average_place_ratio": "Average",
+    "total_place_count": "Place Count",
+    "total_pickup_count": "Pickup Count",
+    "place_ratio": "Place Ratio",
+    "place_count": "Place Count",
+    "pickup_count": "Pickup Count",
+    "reel_barcode": "Reel",
+    "part_no": "Part",
+    "feeder_barcode": "Feeder",
+    "nozzle": "Nozzle",
+    "product_name": "Product",
+    "equipment_name": "Equipment",
+    "route_name": "Route",
+    "lane_no": "Lane",
+    "shift_name": "Shift",
+    "interval": "Date",
+    "start_time": "Start",
+    "end_time": "End"
+  },
+  "details": [
+    {
+      "key": "interval",
+      "details": [
+        {
+          "interval": "dec",
+          "place_ratio": 0,
+          "place_count": 0,
+          "pickup_count": 0,
+          "start_time": "2016-12-01 00:00:00",
+          "end_time": "2017-01-01 00:00:00"
+        },
+        {
+          "interval": "jan",
+          "place_ratio": 0,
+          "place_count": 0,
+          "pickup_count": 0,
+          "start_time": "2017-01-01 00:00:00",
+          "end_time": "2017-02-01 00:00:00"
+        },
+        {
+          "interval": "feb",
+          "place_ratio": 0,
+          "place_count": 0,
+          "pickup_count": 0,
+          "start_time": "2017-02-01 00:00:00",
+          "end_time": "2017-03-01 00:00:00"
+        },
+        {
+          "interval": "mar",
+          "place_ratio": 100,
+          "place_count": 1846,
+          "pickup_count": 1846,
+          "start_time": "2017-03-01 00:00:00",
+          "end_time": "2017-04-01 00:00:00"
+        },
+        {
+          "interval": "apr",
+          "place_ratio": 100,
+          "place_count": 79,
+          "pickup_count": 79,
+          "start_time": "2017-04-01 00:00:00",
+          "end_time": "2017-05-01 00:00:00"
+        },
+        {
+          "interval": "may",
+          "place_ratio": 95.81,
+          "place_count": 160,
+          "pickup_count": 167,
+          "start_time": "2017-05-01 00:00:00",
+          "end_time": "2017-06-01 00:00:00"
+        },
+        {
+          "interval": "jun",
+          "place_ratio": 100,
+          "place_count": 24,
+          "pickup_count": 24,
+          "start_time": "2017-06-01 00:00:00",
+          "end_time": "2017-07-01 00:00:00"
+        }
+      ],
+      "label": "Month",
+      "min_index": 5
+    },
+    {
+      "key": "route_name",
+      "details": [
+        {
+          "route_name": "LCLine-2",
+          "place_ratio": 99.67,
+          "place_count": 2109,
+          "pickup_count": 2116
+        }
+      ],
+      "label": "Route",
+      "min_index": 0
+    },
+    {
+      "key": "feeder_barcode",
+      "details": [
+        {
+          "feeder_barcode": "FA0210AXA042017",
+          "place_ratio": 99.67,
+          "place_count": 2109,
+          "pickup_count": 2116
+        }
+      ],
+      "label": "Feeder",
+      "min_index": 0
+    },
+    {
+      "key": "part_no",
+      "details": [
+        {
+          "part_no": "KCIM001",
+          "place_ratio": 99.67,
+          "place_count": 2091,
+          "pickup_count": 2098
+        },
+        {
+          "part_no": "1005C",
+          "place_ratio": 100,
+          "place_count": 18,
+          "pickup_count": 18
+        }
+      ],
+      "label": "Part",
+      "min_index": 0
+    }
+  ],
+  "source": "usp_get_pa_feeder_placement",
+  "parameters": {
+    "start_time": "2016-12-6 0:0:0",
+    "end_time": "2017-06-06 10:14:07"
+  },
+  "call_time": "2017-06-06 08:14:23",
+  "execution_time": "00:00:00.026406"
+}

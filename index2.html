@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oee, placement, board</title>
+</head>
+<body>
+<h2>1. oee</h2>
+
+<h3>oee0</h3>
+<pre><code id="oee0">oee0</code></pre>
+<h3>oee1</h3>
+<pre><code id="oee1">oee1</code></pre>
+
+<h2>2. placement</h2>
+
+<h3>placement2</h3>
+
+<div id="placement2">placement2</div>
+<h3>placement3</h3>
+
+<div id="placement3">placement3</div>
+
+<h2>3. board</h2>
+
+<h3>board4</h3>
+
+<div id="board4">board4</div>
+<h3>board5</h3>
+
+<div id="board5">board5</div>
+
+<script type="text/javascript" src="libs/jquery-1.9.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var json_path = './data/';
+        var drilldown_keys = ['oee', 'placement', 'board'];
+        var store = {
+            fromDB: {}
+        };
+
+        //save PSQL-json details dtat into store.fromDB.
+        var searchWorstDetails = function (data) {
+            if (data) {
+                var details = {};
+                Object.keys(data).forEach(function (d) {
+                    details[d] = data[d].details.slice(0, 2);
+                });
+                store.fromDB = details;
+            }
+            console.log(store.fromDB);
+            return store.fromDB;
+        }
+
+        var ary = drilldown_keys.map(function (x) {
+            return $.getJSON(json_path + x + '.json');
+        });
+
+        //return: data, status, jqXHR
+        $.when(ary[0], ary[1], ary[2]).done(function (d1, d2, d3) {
+            var obj = {};
+            obj[drilldown_keys[0]] = d1[0];
+            obj[drilldown_keys[1]] = d2[0];
+            obj[drilldown_keys[2]] = d3[0];
+
+            searchWorstDetails(obj);
+
+            drilldown_keys.forEach(function (dk) {
+                $('#' + searchMap[dk][0]).html(JSON.stringify(store.fromDB[dk][0]));
+                $('#' + searchMap[dk][1]).html(JSON.stringify(store.fromDB[dk][1]));
+            })
+        });
+
+        var searchMap = {};
+        drilldown_keys.forEach(function (k, i) {
+            searchMap[k] = [k + i * 2, k + (i * 2 + 1)]
+        });
+        console.log(JSON.stringify(searchMap));
+
+
+        var getJson = function (divId) {
+            var owd = [], inx = -1;
+            var swd = searchWorstDetails();
+            for (var i in searchMap) {
+                inx = searchMap[i].indexOf(divId);
+                if (inx !== -1) {
+                    owd.push(i, swd[i][inx]);
+                    break;
+                }
+            }
+            return owd;
+        }
+    });
+</script>
+</body>
+</html>

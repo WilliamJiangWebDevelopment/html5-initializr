@@ -48,7 +48,6 @@ filterStore.dispatch();
 filterStore.subscribe();
 
 
-
 var filterParams = [{
     "quickFilter": "",
     "range": "All",
